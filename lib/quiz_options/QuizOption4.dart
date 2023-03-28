@@ -167,7 +167,9 @@ class _QuizOption4State extends State<QuizOption4> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            _hasSelected ? "${widget.quiz.quote_title}" : "Ju nuk jeni të saktë!",
+                            _hasSelected
+                                ? "${widget.quiz.quote_title}"
+                                : "Ju nuk jeni të saktë!",
                             textAlign: TextAlign.left,
                             style: TextStyle(
                               fontFamily: "Berlin",

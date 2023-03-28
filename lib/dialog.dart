@@ -39,12 +39,12 @@ class PlaceholderDialog extends StatelessWidget {
                     TextButton(
                       onPressed: () => Get.to(Section(
                           id: 1,
-                          title: "Grupmocha",
-                          sub_title: "8-10 VJEC",
+                          title: "Grupmosha",
+                          sub_title: "8-10 vjeç",
                           bg: "uploads/images/section1-bg.png",
                           section_bg: "uploads/images/section1-bg.png")),
                       child: Text(
-                        "Grupmocha 8-10 VJEC",
+                        "Grupmosha 8-10 vjeç",
                         style: TextStyle(
                             fontSize: 22,
                             fontWeight: FontWeight.bold,
@@ -60,13 +60,13 @@ class PlaceholderDialog extends StatelessWidget {
                       onPressed: () => Get.to(
                         Section(
                             id: 2,
-                            title: "Grupmocha",
-                            sub_title: "11-14 VJEC",
+                            title: "Grupmosha",
+                            sub_title: "11-14 vjeç",
                             bg: "uploads/images/section2-bg.png",
                             section_bg: "uploads/images/section2-bg.png"),
                       ),
                       child: Text(
-                        "Grupmocha 11-14 VJEC",
+                        "Grupmosha 11-14 vjeç",
                         style: TextStyle(
                           fontSize: 22,
                           fontWeight: FontWeight.bold,
@@ -82,13 +82,13 @@ class PlaceholderDialog extends StatelessWidget {
                       onPressed: () => Get.to(
                         Section(
                             id: 3,
-                            title: "Grupmocha",
-                            sub_title: "15-18 VJEC",
+                            title: "Grupmosha",
+                            sub_title: "15-18 vjeç",
                             bg: "uploads/images/section2-bg.png",
                             section_bg: "uploads/images/section2-bg.png"),
                       ),
                       child: Text(
-                        "Grupmocha 15-18 VJEC",
+                        "Grupmosha 15-18 vjeç",
                         style: TextStyle(
                           fontSize: 22,
                           fontWeight: FontWeight.bold,
@@ -118,7 +118,7 @@ class PlaceholderDialog extends StatelessWidget {
                     TextButton(
                       onPressed: () => Get.to(CyberPage()),
                       child: Text(
-                        "Roli i AMK",
+                        "Roli i AMK-së",
                         style: TextStyle(
                           fontSize: 22,
                           fontWeight: FontWeight.bold,

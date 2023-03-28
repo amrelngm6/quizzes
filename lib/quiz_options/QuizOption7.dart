@@ -1,17 +1,16 @@
 import 'dart:convert';
+import 'dart:io';
 import 'dart:math';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/rendering.dart';
 import 'package:Quizzes/quiz.dart';
-import 'package:get/get.dart';
 import '../QuizModel.dart';
 import '../client.dart';
 import '../menu.dart';
 import '../backBtn.dart';
 import '../sections.dart';
 import '../Helpers.dart';
-import './QuizOption4.dart';
 import './QuizOption5.dart';
 import './QuizOption6.dart';
 
@@ -33,6 +32,8 @@ class _QuizOption7State extends State<QuizOption7> {
   late bool _hasSelected = false;
   late bool showCelebrategif = false;
   late bool _optionChecked = false;
+
+  late bool _finished = false;
 
   final Sections sections = Sections(
       title: "Zgjidhni",
@@ -68,39 +69,37 @@ class _QuizOption7State extends State<QuizOption7> {
                     image: CachedNetworkImageProvider(
                         httpService.imaegURL + '${widget.quiz.options_img}')),
                 Padding(
-                  padding: EdgeInsets.fromLTRB(2, 0, 2, 0),
+                  padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
                   child: Text(
                     "${widget.quiz.title}",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontFamily: "Berlin",
-                      fontSize: _query.length > 4 ? 18 : 20,
+                      fontSize: widget.quiz.title!.length > 100 ? 18 : 22,
                       fontWeight: FontWeight.bold,
                       color: Colors.orange[400],
                     ),
                   ),
                 ),
-                SizedBox(height: 5),
                 Padding(
-                  padding: EdgeInsets.fromLTRB(2, 0, 2, 0),
+                  padding: EdgeInsets.fromLTRB(2, 10, 2, 30),
                   child: Text(
-                    "${widget.quiz.sub_title != null ? widget.quiz.sub_title : ""}",
+                    "${widget.quiz.sub_title}",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontFamily: "Berlin",
-                      fontSize: _query.length > 4 ? 16 : 18,
+                      fontSize: 18,
                       fontWeight: FontWeight.normal,
                       color: Colors.black87,
                     ),
                   ),
                 ),
-                SizedBox(height: 30),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     (_query[0].id! > 0)
                         ? Padding(
-                            padding: EdgeInsets.fromLTRB(45, 0, 0, 0),
+                            padding: EdgeInsets.symmetric(horizontal: 10),
                             child: GestureDetector(
                                 // When the child is tapped, show a snackbar.
                                 onTap: () {
@@ -132,62 +131,58 @@ class _QuizOption7State extends State<QuizOption7> {
                         : Center(),
                     (_query[1].id! > 0)
                         ? Padding(
-                            padding: EdgeInsets.fromLTRB(45, 0, 0, 0),
+                            padding: EdgeInsets.symmetric(horizontal: 10),
                             child: GestureDetector(
-                                // When the child is tapped, show a snackbar.
-                                onTap: () {
-                                  setState(() {
-                                    handleClick(1);
-                                  });
-                                },
-                                child: Center(
-                                  child: OutlinedButton(
-                                    onPressed: null,
-                                    style: OutlinedButton.styleFrom(
-                                        padding: EdgeInsets.all(18),
-                                        side: BorderSide(
-                                            color: helper.checkColor(
-                                                _optionChecked, _query[1])),
-                                        shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(16))),
-                                    child: Text(
-                                      _query[1].text!,
-                                      style: TextStyle(
-                                          fontSize: 22,
+                              // When the child is tapped, show a snackbar.
+                              onTap: () {
+                                setState(() {
+                                  handleClick(1);
+                                });
+                              },
+                              child: Center(
+                                child: OutlinedButton(
+                                  onPressed: null,
+                                  style: OutlinedButton.styleFrom(
+                                      padding: EdgeInsets.all(18),
+                                      side: BorderSide(
                                           color: helper.checkColor(
                                               _optionChecked, _query[1])),
-                                    ),
+                                      shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(16))),
+                                  child: Text(
+                                    _query[1].text!,
+                                    style: TextStyle(
+                                        fontSize: 22,
+                                        color: helper.checkColor(
+                                            _optionChecked, _query[1])),
                                   ),
-                                )),
+                                ),
+                              ),
+                            ),
                           )
                         : Center(),
                   ],
-                ),
-                SizedBox(height: 30),
-                !_optionChecked
-                    ? Center()
-                    : Positioned(
-                        bottom: 20,
-                        child: GestureDetector(
-                          // When the child is tapped, show a snackbar.
-                          onTap: () {
-                            (widget.quiz.next_id! > 0)
-                                ? helper
-                                    .funcThatMakesAsyncCall(widget.quiz.next_id)
-                                : Get.to(sections);
-                          },
-                          // The custom button
-                          child: Image(
-                            width: 160,
-                            height: 50,
-                            image: AssetImage("assets/vazhdo.png"),
-                            alignment: Alignment.bottomRight,
-                          ),
-                        ),
-                      ),
+                )
               ],
             ),
+            !_optionChecked
+                ? Center()
+                : Positioned(
+                    bottom: 20,
+                    child: GestureDetector(
+                      // When the child is tapped, show a snackbar.
+                      onTap: () {
+                        helper.funcThatMakesAsyncCall(widget.quiz.next_id);
+                      },
+                      // The custom button
+                      child: Image(
+                        width: 160,
+                        image: AssetImage("assets/vazhdo.png"),
+                        alignment: Alignment.bottomRight,
+                      ),
+                    ),
+                  ),
             showCelebrategif
                 ? Image(image: AssetImage("assets/celebrate.gif"))
                 : Center()
@@ -198,21 +193,19 @@ class _QuizOption7State extends State<QuizOption7> {
   }
 
   handleClick(index) {
-    setState(() {
-      if (!_optionChecked) {
-        for (var item in _query) {
-          item.selected = false;
-        }
-        _query[index].selected = true;
-        _hasSelected = !_query[index].is_correct! ? false : true;
-        if (_hasSelected) {
-          showCelebrategif = true;
-          helper.playWin();
-        } else {
-          helper.playLose();
-        }
+    if (!_optionChecked) {
+      for (var item in _query) {
+        item.selected = false;
       }
-      _optionChecked = true;
-    });
+      _query[index].selected = true;
+      _hasSelected = !_query[index].is_correct! ? false : true;
+      if (_hasSelected) {
+        showCelebrategif = true;
+        helper.playWin();
+      } else {
+        helper.playLose();
+      }
+    }
+    _optionChecked = true;
   }
 }

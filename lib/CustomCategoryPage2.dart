@@ -645,6 +645,235 @@ class _CustomCategoryPage2State extends State<CustomCategoryPage2> {
                               ),
                             ),
                             SizedBox(height: 20),
+                            Text(
+                              "Varësia nga interneti",
+                              style: TextStyle(
+                                  fontFamily: "SFUIText",
+                                  fontSize: 16,
+                                  color: Color.fromARGB(255, 156, 44, 176),
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            SizedBox(height: 5),
+                            Text(
+                              "Termi “Varësia nga interneti” përdoret për të shpjeguar përdorimin e tepruar të internetit. Përdorimi i pakontrolluar i internetit mund të ndikojë negativisht në jetën e përditshme, në punë, dhe aspekte të tjera të jetës shoqërore. Mund të njihet edhe si varësia nga kompjuteri apo varësia online.",
+                              style: TextStyle(
+                                fontFamily: "SFUIText",
+                                fontSize: 16,
+                                color: Colors.black54,
+                              ),
+                            ),
+                            SizedBox(height: 5),
+                            Text(
+                              "Disa nga karakteristikat që fëmijët paraqesin në këto raste: ",
+                              style: TextStyle(
+                                fontFamily: "SFUIText",
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16,
+                                color: Colors.black54,
+                              ),
+                            ),
+                            SizedBox(height: 15),
+                            Text(
+                              "- Shpenzojne periudha të gjata kohore në internet dhe nuk e menaxhojnë dot kohën",
+                              style: TextStyle(
+                                fontFamily: "SFUIText",
+                                fontSize: 16,
+                                color: Colors.black54,
+                              ),
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              "- Preferojnë më shumë të komunikojnë më shokët e tyre online se me miqtë e tyre reale",
+                              style: TextStyle(
+                                fontFamily: "SFUIText",
+                                fontSize: 16,
+                                color: Colors.black54,
+                              ),
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              "- Preferojnë më shumë të luajnë për orë të gjata në lojrat online se sa lojrat reale",
+                              style: TextStyle(
+                                fontFamily: "SFUIText",
+                                fontSize: 16,
+                                color: Colors.black54,
+                              ),
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              "- Zbehet jeta e tyre sociale- kulturore",
+                              style: TextStyle(
+                                fontFamily: "SFUIText",
+                                fontSize: 16,
+                                color: Colors.black54,
+                              ),
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              "- Kohë e pamjaftueshme për të përgatitur detyrat e shtëpisë",
+                              style: TextStyle(
+                                fontFamily: "SFUIText",
+                                fontSize: 16,
+                                color: Colors.black54,
+                              ),
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              "- Probleme dhe efekte negative shëndetësore",
+                              style: TextStyle(
+                                fontFamily: "SFUIText",
+                                fontSize: 16,
+                                color: Colors.black54,
+                              ),
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              "- Probleme pagjumësie",
+                              style: TextStyle(
+                                fontFamily: "SFUIText",
+                                fontSize: 16,
+                                color: Colors.black54,
+                              ),
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              "- Ndikim negative në marrëdhëniet familjare, prishje e raporeve me shoqërinë",
+                              style: TextStyle(
+                                fontFamily: "SFUIText",
+                                fontSize: 16,
+                                color: Colors.black54,
+                              ),
+                            ),
+                            SizedBox(height: 20),
+                            Text(
+                              "Çfarë mund të bëni ju?",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontFamily: "SFUIText",
+                                fontSize: 16,
+                                color: Colors.black54,
+                              ),
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              "- Kërkoni ndihmë nga prindërit apo kujdestarët tuaj",
+                              style: TextStyle(
+                                fontFamily: "SFUIText",
+                                fontSize: 16,
+                                color: Colors.black54,
+                              ),
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              "- Kaloni me tepër kohë me miqte tuaj, dilni bashke, luani bashke, pra argëtohuni me ta",
+                              style: TextStyle(
+                                fontFamily: "SFUIText",
+                                fontSize: 16,
+                                color: Colors.black54,
+                              ),
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              "- Kerkoni ndihmën e një psikologu/e në shkollë",
+                              style: TextStyle(
+                                fontFamily: "SFUIText",
+                                fontSize: 16,
+                                color: Colors.black54,
+                              ),
+                            ),
+                            SizedBox(height: 20),
+                            Text(
+                              "Njohjet me njerëz të panjohur",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontFamily: "SFUIText",
+                                fontSize: 16,
+                                color: Colors.black54,
+                              ),
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              "Faqe të ndryshme në internet dhe rrjetet sociale, dhomat e chatit etj, ofrojnë mundësi të ndryshme pë krijimin e njohjeve të reja me miq të rinj virtual. Si rrjedhojë mund të takoni edhe njerëz të cilët nuk kanë asnjë qëllim të mirë ndaj jush. Ata përgjithësisht janë të rritur të cilët fshihen pas profileve dhe identiteteve false. Informacioni që ata përcjellin për vetem e tyre mund të jetë i trilluar. Duhet të tregoheni të kujdesshëm në rast se kërkojn të ketë një takim nga afër me ju. Rekomandohet ta diskutoni më parë me prindërit tuaj",
+                              style: TextStyle(
+                                fontFamily: "SFUIText",
+                                fontSize: 16,
+                                color: Colors.black54,
+                              ),
+                            ),
+                            SizedBox(height: 20),
+                            Text(
+                              "Këshillat për fëmijët",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontFamily: "SFUIText",
+                                fontSize: 16,
+                                color: Colors.black54,
+                              ),
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              "Mos jepni informacion rreth adresës së shtëpisë, shkollës apo numra telefoni personave të panjohur dhe/ose atyre të njour nëpërmjet internetit",
+                              style: TextStyle(
+                                fontFamily: "SFUIText",
+                                fontSize: 16,
+                                color: Colors.black54,
+                              ),
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              "Mos shkarkoni foto ose video të dërguara nga adresa/persona të panjhur ose të njohur nëpërmjet internetit",
+                              style: TextStyle(
+                                fontFamily: "SFUIText",
+                                fontSize: 16,
+                                color: Colors.black54,
+                              ),
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              "Mos i dërgoni fotografitë tuaja personale ndonjë të panjohuri. Nuk mund ta dini se si mund të përdoren ato prej tyre",
+                              style: TextStyle(
+                                fontFamily: "SFUIText",
+                                fontSize: 16,
+                                color: Colors.black54,
+                              ),
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              "Tregojuni menjëherë prindërve, familjarëve më të rritur, mësueses tuaj nëse ndiheni të rrezikuar ose të frikësuar",
+                              style: TextStyle(
+                                fontFamily: "SFUIText",
+                                fontSize: 16,
+                                color: Colors.black54,
+                              ),
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              "Kujtoni se personi që ju mund të njihni në internet mund t’ju thotë se është moshatari juaj, por në të vërtetë mund të jetë një i rritur i cili kërkon t’ju lëndojë",
+                              style: TextStyle(
+                                fontFamily: "SFUIText",
+                                fontSize: 16,
+                                color: Colors.black54,
+                              ),
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              "Mos lini takim dhe mos u takoni me asnjë person me të cilin jeni njohur nëpërmjet internetit",
+                              style: TextStyle(
+                                fontFamily: "SFUIText",
+                                fontSize: 16,
+                                color: Colors.black54,
+                              ),
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              "Asnjëherë nuk e dini se kush qëndron në anën tjetër të kompjuterit! Tregohuni të kujdesshëm!",
+                              style: TextStyle(
+                                fontFamily: "SFUIText",
+                                fontSize: 16,
+                                color: Colors.black54,
+                              ),
+                            ),
+                            SizedBox(height: 10),
                           ],
                         ),
                       )),
