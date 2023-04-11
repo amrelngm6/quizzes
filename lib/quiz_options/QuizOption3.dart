@@ -162,7 +162,7 @@ class _QuizOption3State extends State<QuizOption3> {
                   },
                   child: Container(
                     alignment: Alignment.bottomCenter,
-                    margin: EdgeInsets.fromLTRB(0, 10, 0, 0),
+                    margin: EdgeInsets.fromLTRB(0, 0, 0, 10),
                     height: 50,
                     width: 150,
                     decoration: const BoxDecoration(

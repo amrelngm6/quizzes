@@ -175,7 +175,7 @@ class _QuizOption4State extends State<QuizOption4> {
                               fontFamily: "Berlin",
                               fontSize: 24,
                               fontWeight: FontWeight.bold,
-                              color: Colors.green[400],
+                              color: helper.checkQuoteColor(_hasSelected),
                             ),
                           ),
                           SizedBox(
@@ -201,17 +201,23 @@ class _QuizOption4State extends State<QuizOption4> {
                 ? Center()
                 : Positioned(
                     bottom: 20,
-                    right: 20,
+                    // right: 20,
                     child: GestureDetector(
                       // When the child is tapped, show a snackbar.
                       onTap: () {
                         helper.funcThatMakesAsyncCall(widget.quiz.next_id);
                       },
                       // The custom button
-                      child: Image(
-                        width: 160,
-                        image: AssetImage("assets/vazhdo.png"),
-                        alignment: Alignment.bottomRight,
+                      child: Container(
+                        alignment: Alignment.bottomCenter,
+                        margin: EdgeInsets.fromLTRB(0, 0, 0, 10),
+                        height: 50,
+                        width: 150,
+                        decoration: const BoxDecoration(
+                          image: DecorationImage(
+                            image: AssetImage("assets/vazhdo.png"),
+                          ),
+                        ),
                       ),
                     ),
                   ),

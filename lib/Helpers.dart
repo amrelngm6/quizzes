@@ -66,8 +66,12 @@ class Helper {
       return [Colors.blue[100], Colors.blue[600]];
   }
 
-  checkColor(_optionChecked, item) {
-    return gradientColor(_optionChecked, item)[1];
+  checkColor(optionChecked, item) {
+    return gradientColor(optionChecked, item)[1];
+  }
+
+  checkQuoteColor(state) {
+    return state ? Colors.green[400] : Colors.red[400];
   }
 }
 

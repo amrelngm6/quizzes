@@ -210,7 +210,7 @@ class _QuizOption5State extends State<QuizOption5> {
                               fontFamily: "Berlin",
                               fontSize: 24,
                               fontWeight: FontWeight.bold,
-                              color: Colors.green[400],
+                              color: helper.checkQuoteColor(_hasSelected),
                             ),
                           ),
                           SizedBox(

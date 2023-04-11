@@ -1,19 +1,11 @@
-import 'dart:io';
-
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:Quizzes/QuizModel.dart';
-import 'package:Quizzes/QuizOptions.dart';
 import 'package:Quizzes/backBtn.dart';
-import 'package:Quizzes/quiz_options/QuizOption1.dart';
 import 'package:video_player/video_player.dart';
 import 'client.dart';
-import 'menu.dart';
 import 'Helpers.dart';
 import 'video.dart';
-import '../quiz_options/QuizOption1.dart';
-import '../quiz_options/QuizOption2.dart';
 // import '../quiz_options/QuizOption2.dart';
 // import '../quiz_options/QuizOption3.dart';
 
@@ -23,13 +15,13 @@ import '../quiz_options/QuizOption2.dart';
 class IntroVideoApp extends StatefulWidget {
   IntroVideoApp({Key? key, required this.quizModel}) : super(key: key);
 
-  QuizModel quizModel;
+  final QuizModel quizModel;
 
   @override
-  _IntroVideoAppState createState() => _IntroVideoAppState();
+  IntroVideoAppState createState() => IntroVideoAppState();
 }
 
-class _IntroVideoAppState extends State<IntroVideoApp> {
+class IntroVideoAppState extends State<IntroVideoApp> {
   late VideoPlayerController _controller;
   final Helper helper = Helper();
 
